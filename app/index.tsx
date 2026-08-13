@@ -33,7 +33,7 @@ const s = StyleSheet.create({
   btn:{
     position: 'absolute',
     bottom: 100,
-    left: 80,
+    left: 50,
     backgroundColor: '#084887',
     paddingVertical: 20,
     paddingHorizontal: 100,
@@ -41,6 +41,7 @@ const s = StyleSheet.create({
   },
   btnText:{
     color: '#ffffff',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: 30
   }
 })

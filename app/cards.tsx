@@ -9,7 +9,9 @@ export default function Cards(){
                 <Text>Sair</Text>
            </TouchableOpacity>
 
-           <View style={s.nav}>
+           <Text>Cards</Text>
+
+        <View style={s.nav}>
             <TouchableOpacity onPress={() => router.push('/contato')}>
                 <Image source={require('../assets/icons/left.png')}/>
             </TouchableOpacity>

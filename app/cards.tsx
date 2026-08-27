@@ -1,16 +1,21 @@
 import { router } from "expo-router";
-import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, Image, FlatList } from "react-native";
+import dados from '@/assets/constants/mock'
+import { Item } from "@/components/item"
 
 export default function Cards(){
 
     return(
-        <View>
+        <View style={s.screen}>
            <TouchableOpacity onPress={() => router.push('/')}>
                 <Text>Sair</Text>
            </TouchableOpacity>
 
-           <Text>Cards</Text>
-
+            <FlatList data={dados} renderItem={({item}) => (
+                <Item picture={item.image} title={item.title} text={item.text} />
+            )}>
+            </FlatList>
+ 
         <View style={s.nav}>
             <TouchableOpacity onPress={() => router.push('/contato')}>
                 <Image source={require('../assets/icons/left.png')}/>
@@ -32,5 +37,8 @@ const s = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
         padding: 20
+    },
+    screen:{
+        flex: 1
     }
 })
